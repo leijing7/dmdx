@@ -49,9 +49,11 @@ _.each(subjectBeginEndIdx, function(subjectBE, idx) {
 read infor from the key files
 */
 
+var XLSX = require('xlsx');
 var keyFile = 'tmp/McGurkKey.xlsx';
 
-var XLSX = require('xlsx');
+var config = {'Item No.': '2'};
+
 var workbook = XLSX.readFile(keyFile);
 var jsonDataArr = XLSX.utils.sheet_to_json(workbook.Sheets['Clear']);
 
