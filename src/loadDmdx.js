@@ -22,7 +22,7 @@ module.exports = (function() {
   function getStarLineIndexArr(dataLineArr) {
     var starLineIdxArr = [];
     _.each(dataLineArr, function(line, idx) {
-      if (line.indexOf('*******') === 0) {
+      if (line.indexOf('***********') === 0) {
         starLineIdxArr.push(idx);
       }
     });
@@ -73,8 +73,8 @@ module.exports = (function() {
         row['Initials'] = id.split(',')[2];
         row['Condition'] = condition;
 
-        row['Item number'] = line.split(/\s{2,}/)[0];
-        row['Reaction time'] = line.split(/\s{2,}/)[1];
+        row['Item number'] = line.split(/\s{1,}/)[0];
+        row['Reaction time'] = line.split(/\s{1,}/)[1];
         row['Block'] = row['Item number'][0];
         row['Trial'] = row['Item number'][1];
 
