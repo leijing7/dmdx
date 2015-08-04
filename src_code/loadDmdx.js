@@ -40,16 +40,13 @@ module.exports = (function() {
     for (var i = 1; i < starLineIdxArr.length; i++) {
       subjectBeginEndIdxArr.push([starLineIdxArr[i - 1] + 1, starLineIdxArr[i] - 1]);
     }
-
-    // console.log('*** star line index: ', starLineIdxArr);
-    // console.log('subject idx range:', subjectBeginEndIdxArr);
     return subjectBeginEndIdxArr;
   }
 
 
   //get each item response with id info
   //condition: Native or NonNative
-  function getItemRowArr(dataLineArr, subjectBeginEndIdxArr, condition) {
+  function getNnItemRowArr(dataLineArr, subjectBeginEndIdxArr, condition) {
     var jsonRowArr = [];
     _.each(subjectBeginEndIdxArr, function(subjectBE, idx) {
       var subjectTitleLine = dataLineArr[subjectBE[0]];
@@ -78,25 +75,110 @@ module.exports = (function() {
         row['Block'] = row['Item number'][0];
         row['Trial'] = row['Item number'][1];
 
-        row['Accuracy'] = row['Reaction time']>0 ? 1 : 0;
+        row['Accuracy'] = row['Reaction time'] > 0 ? 1 : 0;
 
         jsonRowArr.push(row);
       }
     })
-    //console.log(jsonRowArr);
     return jsonRowArr;
   }
 
-  // public function
-  function dmdxToJson(filePath, condition) {
+  // public function for N-NN
+  function nnDmdxToJson(filePath, condition) {
     var nLineArr = loadFileAsLineArr(filePath);
     var starIdxArr = getStarLineIndexArr(nLineArr);
     var subjectIdxRangeArr = getSubjectIdxRangeArr(nLineArr, starIdxArr);
-    return getItemRowArr(nLineArr, subjectIdxRangeArr, condition);
+    return getNnItemRowArr(nLineArr, subjectIdxRangeArr, condition);
+  }
+
+  //////////////////////////////////////////////////////////
+  //get each item response with id info
+  //condition: Clear or Noise
+  //////////////////////////////////////////////////////////
+  function getMcItemRowArr(dataLineArr, subjectBeginEndIdxArr, Genre) {
+    var jsonRowArr = [];
+    _.each(subjectBeginEndIdxArr, function(subjectBE, idx) {
+      var subjectTitleLine = dataLineArr[subjectBE[0]];
+
+      var id = subjectTitleLine.substring(subjectTitleLine.indexOf(' ID ') + 4);
+      id = id.replace(/[\r]+/g, ''); //remove the last '\r' char;
+
+      //+2 skip " Item       RT " header
+      var noResponseItemNum = 9999;
+      for (var i = subjectBE[0] + 2; i <= subjectBE[1]; i++) {
+        var line = dataLineArr[i].trim();
+        if (line.indexOf('Played') > 0 && line.indexOf('frames') > 0) {
+          //get the item number
+          var itemNum = dataLineArr[i + 1].split(',')[0].split(' ')[1];
+          if (itemNum > 100) {
+            continue; //greater than 100 means test item, not real data
+          }
+          //the row would go into the output excel file
+          var row = {};
+
+          row['ID'] = id;
+          row['Group'] = id.split(',')[0];
+          row['Subject'] = id.split(',')[1];
+          row['Initials'] = id.split(',')[2];
+
+          row['Item number'] = itemNum;
+          row['Stimulus filename'] = line.split(' ').pop();
+          if (row['Stimulus filename'].indexOf('mik') >= 0) {
+            row['Stimulus gender'] = 'Male';
+          }
+          if (row['Stimulus filename'].indexOf('lor') >= 0) {
+            row['Stimulus gender'] = 'Female';
+          }
+          if (!row['Stimulus gender']) {
+            console.log(line);
+            console.log("Error: Stimulus gender parse failed.");
+          }
+
+          row['Genre'] = Genre; //this will be removed in merge json
+
+          row['Reaction time'] = dataLineArr[i + 1].split(',')[1].trim();
+
+          //No response: will repeat, get the second same item info
+          if (row['Reaction time'].indexOf('No') >= 0 && noResponseItemNum !== row['Item number']) {
+            noResponseItemNum = row['Item number'];
+            continue;
+          }
+          //response number, will be changed to Participant response code like 'Ba, Da'
+          if (dataLineArr[i + 2].split(',')[1]) {
+            row['Participant btn num'] = dataLineArr[i + 2].split(',')[1][1].trim();
+          } else {
+            row['Participant btn num'] = undefined;
+          }
+
+          row['Accuracy'] = row['Reaction time'] > 0 ? 1 : 0;
+
+          // row['Response - Auditory']
+          // row['Response - Visual']
+          // row['Response - Fused']
+          // row['Response descriptor']
+
+          jsonRowArr.push(row);
+        }
+      }
+    });
+    //console.log(jsonRowArr);
+    return jsonRowArr;
+
+  }
+
+
+  // public function for McGurk
+  function mcDmdxToJson(filePath, Genre) {
+    var nLineArr = loadFileAsLineArr(filePath);
+    var starIdxArr = getStarLineIndexArr(nLineArr);
+    var subjectIdxRangeArr = getSubjectIdxRangeArr(nLineArr, starIdxArr);
+    //process.exit(0);
+    return getMcItemRowArr(nLineArr, subjectIdxRangeArr, Genre);
   }
 
   return {
-    dmdxToJson: dmdxToJson
+    nnDmdxToJson: nnDmdxToJson,
+    mcDmdxToJson: mcDmdxToJson
   }
 
 })();
