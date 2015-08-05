@@ -152,11 +152,6 @@ module.exports = (function() {
 
           row['Accuracy'] = row['Reaction time'] > 0 ? 1 : 0;
 
-          // row['Response - Auditory']
-          // row['Response - Visual']
-          // row['Response - Fused']
-          // row['Response descriptor']
-
           jsonRowArr.push(row);
         }
       }

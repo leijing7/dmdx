@@ -38,8 +38,12 @@ module.exports = (function() {
     return itemKeyJson;
   };
 
+
+  //ij: itemJson;
+  //kj: keyJson
   var mergeMcItemKey = function(ij, kj) {
     var itemKeyJson = _.extend(ij, kj);
+
     delete itemKeyJson['Item No.'];
     delete itemKeyJson['File name'];
     delete itemKeyJson['Speaker Gender'];
@@ -49,15 +53,11 @@ module.exports = (function() {
     delete itemKeyJson['Expected button'];
     delete itemKeyJson['Expected syllable'];
     delete itemKeyJson['Response type'];
-
     delete itemKeyJson['Genre'];
-
-    itemKeyJson['Participant response'] = kj['Expected syllable'];
 
     /*
     /////////////////////////////////////////////////////////////////////////////
     isCorrect: participant pressed btn from .zil with Expected btn collumn (same: 1; not 0)
-
     condition: AO:
     Response - Auditory: isCorrect
     Response - Visual:   -1
@@ -83,29 +83,30 @@ module.exports = (function() {
     Response descriptor: 'Ella to fill'
     */
 
-    var isCorrect = ij['Participant btn num'] === kj['Condition'] ? 1 : 0;
+    itemKeyJson['Participant response'] = ij['Participant btn num'];
+    var isCorrect = (ij['Participant btn num'] === kj['Expected button']) ? 1 : 0;
     switch (kj['Condition']) {
       case 'AO':
         itemKeyJson['Response - Auditory'] = isCorrect;
-        itemKeyJson['Response - Vilsual'] = -1;
+        itemKeyJson['Response - Visual'] = -1;
         itemKeyJson['Response - Fused'] = -1;
         itemKeyJson['Response descriptor'] = itemKeyJson['Response - Auditory'] ? 'Correct' : 'Incorrect';
         break;
       case 'VO':
         itemKeyJson['Response - Auditory'] = -1;
-        itemKeyJson['Response - Vilsual'] = isCorrect;
-        itemKeyJson['Response - Fused'] = itemKeyJson['Response - Vilsual'] ? 0 : 1;
-        itemKeyJson['Response descriptor'] = itemKeyJson['Response - Vilsual'] ? 'Correct' : 'Incorrect';
+        itemKeyJson['Response - Visual'] = isCorrect;
+        itemKeyJson['Response - Fused'] = itemKeyJson['Response - Visual'] ? 0 : 1;
+        itemKeyJson['Response descriptor'] = itemKeyJson['Response - Visual'] ? 'Correct' : 'Incorrect';
         break;
       case 'AV_C':
         itemKeyJson['Response - Auditory'] = isCorrect;
-        itemKeyJson['Response - Vilsual'] = isCorrect;
+        itemKeyJson['Response - Visual'] = isCorrect;
         itemKeyJson['Response - Fused'] = -1;
         itemKeyJson['Response descriptor'] = itemKeyJson['Response - Auditory'] ? 'Correct' : 'Incorrect';
         break;
       case 'AV_M':
         itemKeyJson['Response - Auditory'] = -2;
-        itemKeyJson['Response - Vilsual'] = -2;
+        itemKeyJson['Response - Visual'] = -2;
         itemKeyJson['Response - Fused'] = -2;
         itemKeyJson['Response descriptor'] = 'Ella to fill';
         break;
@@ -113,7 +114,6 @@ module.exports = (function() {
         console.log('Parse AVFd cols error.');
         process.exit(0);
     }
-
     return itemKeyJson;
   };
 

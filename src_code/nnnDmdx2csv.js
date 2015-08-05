@@ -7,8 +7,7 @@ var loadDmdxToJson = require('./loadDmdx').nnnDmdxToJson;
 var nativeDmdxJson = loadDmdxToJson(nativeFile, 'Native');
 var nonNativeDmdxJson = loadDmdxToJson(nonNativeFile, 'NonNative');
 
-var nnnDmdxJson = [];
-nnnDmdxJson = nativeDmdxJson.concat(nonNativeDmdxJson);
+var nnnDmdxJson = nativeDmdxJson.concat(nonNativeDmdxJson);
 var groups = _.groupBy(nnnDmdxJson, 'ID');
 
 //step 2: load the keys and merge them with item json;
