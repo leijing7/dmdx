@@ -167,7 +167,6 @@ module.exports = (function() {
     var nLineArr = loadFileAsLineArr(filePath);
     var starIdxArr = getStarLineIndexArr(nLineArr);
     var subjectIdxRangeArr = getSubjectIdxRangeArr(nLineArr, starIdxArr);
-    //process.exit(0);
     return getMcItemRowArr(nLineArr, subjectIdxRangeArr, Genre);
   }
 

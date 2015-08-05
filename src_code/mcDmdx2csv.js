@@ -1,3 +1,8 @@
+/*
+To save time, input and outp files path are hard coded.
+This file is for McGurk only
+*/
+
 //step 1: load dmdx
 var clearFile = './src_data/McGurkClearScript.zil';
 var noiseFile = './src_data/McGurkNoiseScript.zil';

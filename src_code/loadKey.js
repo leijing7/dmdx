@@ -5,33 +5,30 @@ load key files as json array
 ////////////////////////////////////////////////////////////////////////////////
 
 module.exports = (function() {
+  var XLSX = require('xlsx');
+  var workbook;
 
-//this could separate file reading from below for higher performance
-  function keyToJson(filePath, sheetName, itemNo) {
-    var XLSX = require('xlsx');
+  //this convert sheet to a json array
+  function loadFile(filePath) {
+    workbook = XLSX.readFile(filePath);
+  }
+
+ //check the key json for each item number
+  function keyToJson(sheetName, itemNo) {
     var _ = require('underscore');
 
-    if(!isNaN(itemNo)){
-      itemNo = itemNo.toString();
-    }
+    var keyJsonArr = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);
 
-    var config = {
-      'num': itemNo
-    };
-
-//this convert sheet to a json array
-    var workbook = XLSX.readFile(filePath);
-    var jsonDataArr = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);
-
-    return _.find(jsonDataArr, function(row) {
-      if (row['Item No.'] === this.num) {
+    return _.find(keyJsonArr, function(row) {
+      if (row['Item No.'] === itemNo) {
         return true;
       }
-    }, config);
+    });
   }
 
   return {
+    loadFile: loadFile,
     keyToJson: keyToJson
-  }
+  };
 
 })();
