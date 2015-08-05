@@ -5,8 +5,8 @@ var noiseFile = './src_data/McGurkNoiseScript.zil';
 var loadDmdxToJson = require('./loadDmdx').mcDmdxToJson;
 var clearDmdxJson = loadDmdxToJson(clearFile, 'Clear');
 var noiseDmdxJson = loadDmdxToJson(noiseFile, 'Noise');
-console.log(clearDmdxJson[0]);
-console.log(clearDmdxJson.length);
+
+var mcDmdxJson = clearDmdxJson.concat(noiseDmdxJson);
 
 //step 2: load the keys and merge them with item json;
 //Mc: Clear and Noise
@@ -21,11 +21,11 @@ _.each(clearDmdxJson, function(itemJson) {
   var keyJson = loadKeyToJson(mcKeyFile, itemJson['Genre'], itemJson['Item number']);
   mcJsonArr.push( itemKeyMerge.mergeMcItemKey(itemJson, keyJson) );
   console.log(keyJson);
-})
+});
 _.each(noiseDmdxJson, function(itemJson) {
   var keyJson = loadKeyToJson(mcKeyFile, itemJson['Genre'], itemJson['Item number']);
   mcJsonArr.push( itemKeyMerge.mergeMcItemKey(itemJson, keyJson) );
-})
+});
 
 console.log(clearDmdxJson.length);
 console.log(mcJsonArr.length);
@@ -33,4 +33,4 @@ process.exit(0);
 
 //step 3: write the json arr to a csv file
 var writeJson2csv = require('./jsonTocsv').jsonArrToCsv;
-writeJson2csv(nJsonArr, 'N-NN');
+writeJson2csv(mcJsonArr, 'N-NN');

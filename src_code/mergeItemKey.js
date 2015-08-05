@@ -6,7 +6,7 @@ kj: key json
 
 module.exports = (function() {
   var _ = require('underscore');
-  var mergeNnItemKey = function(ij, kj) {
+  var mergeNnnItemKey = function(ij, kj) {
     var itemKeyJson = _.extend(ij, kj);
     delete itemKeyJson['Item No.'];
     delete itemKeyJson['Stimulus type'];
@@ -33,11 +33,10 @@ module.exports = (function() {
         break;
       default:
         throw ('Wrong Participant response and Target response combination');
-        break;
     }
 
     return itemKeyJson;
-  }
+  };
 
   var mergeMcItemKey = function(ij, kj) {
     var itemKeyJson = _.extend(ij, kj);
@@ -111,16 +110,16 @@ module.exports = (function() {
         itemKeyJson['Response descriptor'] = 'Ella to fill';
         break;
       default:
-        console.log("Parse AVFd cols error.");
+        console.log('Parse AVFd cols error.');
         process.exit(0);
     }
 
     return itemKeyJson;
-  }
+  };
 
   return {
-    mergeNnItemKey: mergeNnItemKey,
+    mergeNnnItemKey: mergeNnnItemKey,
     mergeMcItemKey: mergeMcItemKey
-  }
+  };
 
 })();

@@ -46,9 +46,9 @@ module.exports = (function() {
 
   //get each item response with id info
   //condition: Native or NonNative
-  function getNnItemRowArr(dataLineArr, subjectBeginEndIdxArr, condition) {
+  function getNnnItemRowArr(dataLineArr, subjectBeginEndIdxArr, condition) {
     var jsonRowArr = [];
-    _.each(subjectBeginEndIdxArr, function(subjectBE, idx) {
+    _.each(subjectBeginEndIdxArr, function(subjectBE) {
       var subjectTitleLine = dataLineArr[subjectBE[0]];
 
       var id = subjectTitleLine.substring(subjectTitleLine.indexOf(' ID ') + 4);
@@ -79,16 +79,16 @@ module.exports = (function() {
 
         jsonRowArr.push(row);
       }
-    })
+    });
     return jsonRowArr;
   }
 
   // public function for N-NN
-  function nnDmdxToJson(filePath, condition) {
+  function nnnDmdxToJson(filePath, condition) {
     var nLineArr = loadFileAsLineArr(filePath);
     var starIdxArr = getStarLineIndexArr(nLineArr);
     var subjectIdxRangeArr = getSubjectIdxRangeArr(nLineArr, starIdxArr);
-    return getNnItemRowArr(nLineArr, subjectIdxRangeArr, condition);
+    return getNnnItemRowArr(nLineArr, subjectIdxRangeArr, condition);
   }
 
   //////////////////////////////////////////////////////////
@@ -97,7 +97,7 @@ module.exports = (function() {
   //////////////////////////////////////////////////////////
   function getMcItemRowArr(dataLineArr, subjectBeginEndIdxArr, Genre) {
     var jsonRowArr = [];
-    _.each(subjectBeginEndIdxArr, function(subjectBE, idx) {
+    _.each(subjectBeginEndIdxArr, function(subjectBE) {
       var subjectTitleLine = dataLineArr[subjectBE[0]];
 
       var id = subjectTitleLine.substring(subjectTitleLine.indexOf(' ID ') + 4);
@@ -131,7 +131,7 @@ module.exports = (function() {
           }
           if (!row['Stimulus gender']) {
             console.log(line);
-            console.log("Error: Stimulus gender parse failed.");
+            console.log('Error: Stimulus gender parse failed.');
           }
 
           row['Genre'] = Genre; //this will be removed in merge json
@@ -177,8 +177,8 @@ module.exports = (function() {
   }
 
   return {
-    nnDmdxToJson: nnDmdxToJson,
+    nnnDmdxToJson: nnnDmdxToJson,
     mcDmdxToJson: mcDmdxToJson
-  }
+  };
 
 })();
