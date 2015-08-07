@@ -158,9 +158,7 @@ module.exports = (function() {
     });
     //console.log(jsonRowArr);
     return jsonRowArr;
-
   }
-
 
   // public function for McGurk
   function mcDmdxToJson(filePath, Genre) {
@@ -170,9 +168,21 @@ module.exports = (function() {
     return getMcItemRowArr(nLineArr, subjectIdxRangeArr, Genre);
   }
 
+  function load(expType, filePath, conditionOrGenre) {
+    console.log(expType, filePath, conditionOrGenre,100);
+    switch (expType) {
+      case 'N-NN':
+        return nnnDmdxToJson(filePath, conditionOrGenre);
+      case 'McGurk':
+        return mcDmdxToJson(filePath, conditionOrGenre);
+      default:
+        console.log('Experiment type input error. ' + expType +  ' should be "N-NN" or "McGurk". ');
+        process.exit(1);
+    }
+  }
+
   return {
-    nnnDmdxToJson: nnnDmdxToJson,
-    mcDmdxToJson: mcDmdxToJson
+    load: load
   };
 
 })();

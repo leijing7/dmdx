@@ -18,7 +18,6 @@ module.exports = (function() {
     var _ = require('underscore');
 
     var keyJsonArr = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);
-
     return _.find(keyJsonArr, function(row) {
       if (row['Item No.'] === itemNo) {
         return true;
@@ -28,7 +27,7 @@ module.exports = (function() {
 
   return {
     loadFile: loadFile,
-    keyToJson: keyToJson
+    getJsonByItemNo: keyToJson
   };
 
 })();
