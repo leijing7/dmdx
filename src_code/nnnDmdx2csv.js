@@ -27,7 +27,7 @@ var nnnJsonArr = [];
 _.each(groups, function(g) {
   _.each(g, function(itemJson) {
     var keyJson = keyToJson.keyToJson(itemJson['Condition'], itemJson['Item number']);
-    nnnJsonArr.push(itemKey.mergeNnnItemKey(itemJson, keyJson));
+    nnnJsonArr.push(itemKey.merge(itemJson, keyJson, 'N-NN'));
   });
 });
 
