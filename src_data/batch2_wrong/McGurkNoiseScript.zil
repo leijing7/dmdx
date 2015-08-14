@@ -713,7 +713,7 @@ Item 1095, 1712.25
  1712.25,+4
 
 **********************************************************************
-Subject 4, 07/02/2015 10:09:56 on ITP66820, refresh 16.67ms ID D,4,IM
+Subject 4, 07/02/2015 10:09:56 on ITP66820, refresh 16.67ms D,4,IM
 !  Display error at msec 854.54, tick 49 in item 0, frame "Please listen to the instruction from the experimenter."
 !    was blocked by Flip() not returning till 7.89ms too late
 !     (previous frame's duration will have been longer)
@@ -1251,7 +1251,7 @@ Item 1095, -2750.08
  2750.08,+7
 
 **********************************************************************
-Subject 7, 07/03/2015 15:57:17 on ITP66820, refresh 16.67ms, ID D,13,MR
+Subject 7, 07/03/2015 15:57:17 on ITP66820, refresh 16.67ms, ID D,3,MR
 !  Played 47 frames of 48 in mik_Ba_4dB.avi
 Item 1009, 2009.72
  2009.72,+2
@@ -1781,7 +1781,7 @@ Item 1095, -2407.68
  2407.68,+7
 
 **********************************************************************
-Subject 10, 07/07/2015 14:31:14 on ITP66820, refresh 16.67ms, ID D,7,BB
+Subject 10, 07/07/2015 14:31:14 on ITP66820, refresh 16.67ms, ID D,7,DD
 !  Played 47 frames of 48 in mik_Ba_4dB.avi
 Item 1009, 2379.93
  2379.93,+2
