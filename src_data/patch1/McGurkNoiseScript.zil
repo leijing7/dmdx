@@ -1,9 +1,10 @@
 
-Subjects incorporated to date: 031
+
+Subjects incorporated to date: 001
 Data file started on machine ITP66820
 
 **********************************************************************
-Subject 01, 06/26/2015 16:42:57 on ITP66820, refresh 16.67ms, ID C,1,EB
+Subject 1, 06/26/2015 16:42:57 on ITP66820, refresh 16.67ms, ID C,1,EB
 !  Display error at msec 861.38, tick 49 in item 0, frame "Please listen to the instruction from the experimenter."
 !    was blocked by Flip() not returning till 3.37ms too late
 !     (previous frame's duration will have been longer)
@@ -175,6 +176,9 @@ Item 50, 2944.33
 !  Played 47 frames of 48 in mik_Db_4dB.avi
 Item 66, -4196.07
  4196.07,+4
+
+Subjects incorporated to date: 029
+Data file started on machine ITP66820
 
 **********************************************************************
 Subject 1, 06/29/2015 13:33:56 on ITP66820, refresh 16.67ms, ID D,1,ZL
@@ -533,7 +537,7 @@ Item 1095, -1936.93
  1936.93,+7
 
 **********************************************************************
-Subject 3, 06/29/2015 16:14:00 on ITP66820, refresh 16.67ms ID D,3,FM
+Subject 3, 06/29/2015 16:14:00 on ITP66820, refresh 16.67ms, ID D,3,FM
 !  Display error at msec 858.39, tick 49 in item 0, frame "Please listen to the instruction from the experimenter."
 !    was blocked by Flip() not returning till 0.10ms too late
 !     (previous frame's duration will have been longer)
@@ -713,7 +717,7 @@ Item 1095, 1712.25
  1712.25,+4
 
 **********************************************************************
-Subject 4, 07/02/2015 10:09:56 on ITP66820, refresh 16.67ms D,4,IM
+Subject 4, 07/02/2015 10:09:56 on ITP66820, refresh 16.67ms, ID D,4,IM
 !  Display error at msec 854.54, tick 49 in item 0, frame "Please listen to the instruction from the experimenter."
 !    was blocked by Flip() not returning till 7.89ms too late
 !     (previous frame's duration will have been longer)
@@ -1251,7 +1255,7 @@ Item 1095, -2750.08
  2750.08,+7
 
 **********************************************************************
-Subject 7, 07/03/2015 15:57:17 on ITP66820, refresh 16.67ms, ID D,3,MR
+Subject 7, 07/03/2015 15:57:17 on ITP66820, refresh 16.67ms, ID D,13,MR
 !  Played 47 frames of 48 in mik_Ba_4dB.avi
 Item 1009, 2009.72
  2009.72,+2
@@ -5376,359 +5380,3 @@ Item 1096, -2385.67
 !  Played 55 frames of 56 in mik_Gg_4dB.avi
 Item 1095, -2636.51
  2636.51,+7
-
-**********************************************************************
-Subject 30, 08/06/2015 16:14:41 on ITP66820, refresh 16.67ms, ID D,16,AF
-!  Display error at msec 854.08, tick 48 in item 0, frame "Please listen to the instruction from the experimenter."
-!    was blocked by Flip() not returning till 9.99ms too late
-!     (previous frame's duration will have been longer)
-!  Played 47 frames of 48 in mik_Ba_4dB.avi
-Item 1009, 2605.53
- 2605.53,+2
-!  Played 46 frames of 46 in lor_Gg_4dB.avi
-Item 1010, 2099.62
- 2099.62,+7
-!  Played 50 frames of 50 in mik_Dd_4dB.avi
-Item 1011, 2157.11
- 2157.11,+4
-!  Played 46 frames of 46 in lor_Gv_4dB.avi
-Item 1012, -2818.91
- 2818.91,+4
-!  Played 47 frames of 48 in mik_Bv_4dB.avi
-Item 1013, 2502.77
- 2502.77,+2
-!  Played 46 frames of 46 in lor_Da_4dB.avi
-Item 1014, -2825.97
- 2825.97,+7
-!  Played 55 frames of 56 in mik_Gg_4dB.avi
-Item 1015, 2265.34
- 2265.34,+7
-!  Played 47 frames of 48 in lor_Dd_4dB.avi
-Item 1016, -3292.23
- 3292.23,+7
-!  Played 46 frames of 46 in lor_Gv_4dB.avi
-Item 60, -4090.38
- 4090.38,+2
-!  Played 46 frames of 46 in lor_Gg_4dB.avi
-Item 59, 2263.70
- 2263.70,+7
-!  Played 46 frames of 46 in lor_Bg_4dB.avi
-Item 51, -3825.66
- 3825.66,+2
-!  Played 47 frames of 48 in mik_Bb_4dB.avi
-Item 62, 2773.74
- 2773.74,+2
-!  Played 47 frames of 48 in mik_Dv_4dB.avi
-Item 68, -3925.00
- 3925.00,+7
-!  Played 50 frames of 50 in mik_Dd_4dB.avi
-Item 67, 3182.72
- 3182.72,+4
-!  Played 46 frames of 46 in lor_Dv_4dB.avi
-Item 56, -2563.67
- 2563.67,+7
-!  Played 52 frames of 53 in mik_Bg_4dB.avi
-Item 63, 3768.91
- 3768.91,+4
-!  Played 46 frames of 46 in lor_Da_4dB.avi
-Item 53, -2384.72
- 2384.72,+7
-!  Played 46 frames of 46 in lor_Bb_4dB.avi
-Item 50, 2884.36
- 2884.36,+2
-!  Played 52 frames of 53 in mik_Gv_4dB.avi
-Item 72, -2458.33
- 2458.33,+4
-!  Played 46 frames of 46 in lor_Bv_4dB.avi
-Item 52, 3314.91
- 3314.91,+2
-!  Played 46 frames of 46 in lor_Db_4dB.avi
-Item 54, -2238.46
- 2238.46,+7
-!  Played 47 frames of 48 in mik_Ba_4dB.avi
-Item 61, 2561.35
- 2561.35,+2
-!  Played 55 frames of 56 in mik_Gg_4dB.avi
-Item 71, 2021.43
- 2021.43,+7
-!  Played 47 frames of 48 in mik_Ga_4dB.avi
-Item 69, 2486.63
- 2486.63,+7
-!  Played 47 frames of 48 in mik_Db_4dB.avi
-Item 66, -2151.88
- 2151.88,+4
-!  Played 47 frames of 48 in mik_Da_4dB.avi
-Item 65, 2384.50
- 2384.50,+4
-!  Played 46 frames of 46 in lor_Gb_4dB.avi
-Item 58, -2262.67
- 2262.67,+7
-!  Played 47 frames of 48 in mik_Gb_4dB.avi
-Item 70, -2540.77
- 2540.77,+7
-!  Played 46 frames of 46 in lor_Ga_4dB.avi
-Item 57, 2218.05
- 2218.05,+7
-!  Played 47 frames of 48 in mik_Bv_4dB.avi
-Item 64, 2510.69
- 2510.69,+2
-!  Played 46 frames of 46 in lor_Ba_4dB.avi
-Item 49, 2917.63
- 2917.63,+2
-!  Played 47 frames of 48 in lor_Dd_4dB.avi
-Item 55, -2285.57
- 2285.57,+7
-!  Played 47 frames of 48 in mik_Da_4dB.avi
-Item 89, 2371.69
- 2371.69,+4
-!  Played 47 frames of 48 in mik_Db_4dB.avi
-Item 90, -2551.67
- 2551.67,+4
-!  Played 46 frames of 46 in lor_Gg_4dB.avi
-Item 83, 2458.33
- 2458.33,+7
-!  Played 46 frames of 46 in lor_Gb_4dB.avi
-Item 82, 4064.58
- 4064.58,+4
-!  Played 46 frames of 46 in lor_Ba_4dB.avi
-Item 73, 2470.30
- 2470.30,+2
-!  Played 47 frames of 48 in mik_Gb_4dB.avi
-Item 94, -2099.31
- 2099.31,+7
-!  Played 55 frames of 56 in mik_Gg_4dB.avi
-Item 95, 2190.91
- 2190.91,+7
-!  Played 47 frames of 48 in mik_Bb_4dB.avi
-Item 86, 2182.43
- 2182.43,+2
-!  Played 46 frames of 46 in lor_Da_4dB.avi
-Item 77, -2556.64
- 2556.64,+7
-!  Played 47 frames of 48 in mik_Ba_4dB.avi
-Item 85, 1986.30
- 1986.30,+2
-!  Played 52 frames of 53 in mik_Bg_4dB.avi
-Item 87, 3907.89
- 3907.89,+4
-!  Played 47 frames of 48 in lor_Dd_4dB.avi
-Item 79, -2912.96
- 2912.96,+7
-!  Played 50 frames of 50 in mik_Dd_4dB.avi
-Item 91, 2733.18
- 2733.18,+4
-!  Played 46 frames of 46 in lor_Bg_4dB.avi
-Item 75, -2970.20
- 2970.20,+7
-!  Played 52 frames of 53 in mik_Gv_4dB.avi
-Item 96, -2363.13
- 2363.13,+4
-!  Played 47 frames of 48 in mik_Bv_4dB.avi
-Item 88, 2216.08
- 2216.08,+2
-!  Played 46 frames of 46 in lor_Bb_4dB.avi
-Item 74, 2552.37
- 2552.37,+2
-!  Played 46 frames of 46 in lor_Dv_4dB.avi
-Item 80, 2403.35
- 2403.35,+4
-!  Played 47 frames of 48 in mik_Dv_4dB.avi
-Item 92, 2494.98
- 2494.98,+4
-!  Played 46 frames of 46 in lor_Db_4dB.avi
-Item 78, -2831.21
- 2831.21,+7
-!  Played 46 frames of 46 in lor_Gv_4dB.avi
-Item 84, 3330.59
- 3330.59,+7
-!  Played 46 frames of 46 in lor_Ga_4dB.avi
-Item 81, 2398.78
- 2398.78,+7
-!  Played 46 frames of 46 in lor_Bv_4dB.avi
-Item 76, 2262.39
- 2262.39,+2
-!  Played 47 frames of 48 in mik_Ga_4dB.avi
-Item 93, 2218.38
- 2218.38,+7
-!  Played 52 frames of 53 in mik_Gv_4dB.avi
-Item 1096, -2538.02
- 2538.02,+4
-!  Played 55 frames of 56 in mik_Gg_4dB.avi
-Item 1095, -2603.89
- 2603.89,+7
-
-**********************************************************************
-Subject 31, 08/12/2015 16:17:26 on ITP66820, refresh 16.67ms, ID C,16,ZR
-!  Played 47 frames of 48 in mik_Ba_4dB.avi
-Item 1009, 2477.57
- 2477.57,+2
-!  Played 46 frames of 46 in lor_Gg_4dB.avi
-Item 1010, 2008.70
- 2008.70,+7
-!  Played 50 frames of 50 in mik_Dd_4dB.avi
-Item 1011, 2335.88
- 2335.88,+4
-!  Played 46 frames of 46 in lor_Gv_4dB.avi
-Item 1012, 2748.76
- 2748.76,+7
-!  Played 47 frames of 48 in mik_Bv_4dB.avi
-Item 1013, 2369.47
- 2369.47,+2
-!  Played 46 frames of 46 in lor_Da_4dB.avi
-Item 1014, -2158.03
- 2158.03,+7
-!  Played 55 frames of 56 in mik_Gg_4dB.avi
-Item 1015, 2873.10
- 2873.10,+7
-!  Played 47 frames of 48 in lor_Dd_4dB.avi
-Item 1016, -2165.35
- 2165.35,+7
-Item 55, 2360.82
- 2360.82,+4
-!  Played 46 frames of 46 in lor_Ga_4dB.avi
-Item 57, 2263.76
- 2263.76,+7
-!  Played 46 frames of 46 in lor_Da_4dB.avi
-Item 53, -2960.41
- 2960.41,+7
-!  Played 46 frames of 46 in lor_Ba_4dB.avi
-Item 49, 1914.04
- 1914.04,+2
-!  Played 46 frames of 46 in lor_Gb_4dB.avi
-Item 58, -2578.35
- 2578.35,+7
-!  Played 47 frames of 48 in mik_Bv_4dB.avi
-Item 64, 2310.99
- 2310.99,+2
-!  Played 47 frames of 48 in mik_Bb_4dB.avi
-Item 62, 2340.61
- 2340.61,+2
-!  Played 55 frames of 56 in mik_Gg_4dB.avi
-Item 71, 2178.25
- 2178.25,+7
-!  Played 47 frames of 48 in mik_Ga_4dB.avi
-Item 69, 2065.42
- 2065.42,+7
-!  Played 46 frames of 46 in lor_Bb_4dB.avi
-Item 50, 2408.42
- 2408.42,+2
-!  Played 46 frames of 46 in lor_Gv_4dB.avi
-Item 60, -2802.38
- 2802.38,+4
-!  Played 50 frames of 50 in mik_Dd_4dB.avi
-Item 67, 2972.04
- 2972.04,+4
-!  Played 46 frames of 46 in lor_Bv_4dB.avi
-Item 52, 2345.29
- 2345.29,+2
-!  Played 46 frames of 46 in lor_Bg_4dB.avi
-Item 51, -2591.60
- 2591.60,+2
-!  Played 46 frames of 46 in lor_Gg_4dB.avi
-Item 59, 2102.58
- 2102.58,+7
-!  Played 46 frames of 46 in lor_Db_4dB.avi
-Item 54, -2768.53
- 2768.53,+7
-!  Played 52 frames of 53 in mik_Gv_4dB.avi
-Item 72, 3193.17
- 3193.17,+7
-!  Played 52 frames of 53 in mik_Bg_4dB.avi
-Item 63, 2493.41
- 2493.41,+4
-!  Played 47 frames of 48 in mik_Db_4dB.avi
-Item 66, -5793.56
- 5793.56,+4
-!  Played 47 frames of 48 in mik_Ba_4dB.avi
-Item 61, 2341.74
- 2341.74,+2
-!  Played 47 frames of 48 in mik_Gb_4dB.avi
-Item 70, -2841.66
- 2841.66,+7
-!  Played 46 frames of 46 in lor_Dv_4dB.avi
-Item 56, 2595.27
- 2595.27,+4
-!  Played 47 frames of 48 in mik_Dv_4dB.avi
-Item 68, -2868.19
- 2868.19,+7
-!  Played 47 frames of 48 in mik_Da_4dB.avi
-Item 65, 2507.47
- 2507.47,+4
-!  Played 55 frames of 56 in mik_Gg_4dB.avi
-Item 95, 2084.85
- 2084.85,+7
-!  Played 47 frames of 48 in mik_Bv_4dB.avi
-Item 88, 2065.06
- 2065.06,+2
-!  Played 46 frames of 46 in lor_Gv_4dB.avi
-Item 84, 2239.02
- 2239.02,+7
-!  Played 46 frames of 46 in lor_Ba_4dB.avi
-Item 73, 1985.34
- 1985.34,+2
-!  Played 52 frames of 53 in mik_Bg_4dB.avi
-Item 87, -3096.93
- 3096.93,+2
-!  Played 47 frames of 48 in mik_Gb_4dB.avi
-Item 94, -2910.21
- 2910.21,+7
-!  Played 47 frames of 48 in mik_Bb_4dB.avi
-Item 86, 1920.20
- 1920.20,+2
-!  Played 46 frames of 46 in lor_Bg_4dB.avi
-Item 75, -3027.45
- 3027.45,+7
-!  Played 46 frames of 46 in lor_Gb_4dB.avi
-Item 82, -2120.47
- 2120.47,+7
-!  Played 46 frames of 46 in lor_Bb_4dB.avi
-Item 74, 1873.75
- 1873.75,+2
-!  Played 47 frames of 48 in mik_Ba_4dB.avi
-Item 85, 2070.70
- 2070.70,+2
-!  Played 47 frames of 48 in mik_Da_4dB.avi
-Item 89, 2357.30
- 2357.30,+4
-!  Played 46 frames of 46 in lor_Da_4dB.avi
-Item 77, -2415.93
- 2415.93,+7
-!  Played 47 frames of 48 in mik_Db_4dB.avi
-Item 90, -2467.65
- 2467.65,+4
-!  Played 46 frames of 46 in lor_Gg_4dB.avi
-Item 83, 1966.50
- 1966.50,+7
-!  Played 50 frames of 50 in mik_Dd_4dB.avi
-Item 91, 2048.47
- 2048.47,+4
-!  Played 52 frames of 53 in mik_Gv_4dB.avi
-Item 96, 2047.09
- 2047.09,+7
-!  Played 47 frames of 48 in lor_Dd_4dB.avi
-Item 79, -1995.99
- 1995.99,+7
-!  Played 47 frames of 48 in mik_Dv_4dB.avi
-Item 92, 1941.51
- 1941.51,+4
-!  Played 46 frames of 46 in lor_Dv_4dB.avi
-Item 80, 1861.31
- 1861.31,+4
-!  Played 47 frames of 48 in mik_Ga_4dB.avi
-Item 93, 1904.47
- 1904.47,+7
-!  Played 46 frames of 46 in lor_Ga_4dB.avi
-Item 81, 2344.19
- 2344.19,+7
-!  Played 46 frames of 46 in lor_Bv_4dB.avi
-Item 76, 2219.82
- 2219.82,+2
-!  Played 46 frames of 46 in lor_Db_4dB.avi
-Item 78, -2765.76
- 2765.76,+7
-!  Played 52 frames of 53 in mik_Gv_4dB.avi
-Item 1096, -2605.10
- 2605.10,+4
-!  Played 55 frames of 56 in mik_Gg_4dB.avi
-Item 1095, -2096.67
- 2096.67,+7

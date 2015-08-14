@@ -1,7 +1,7 @@
 
 
 **********************************************************************
-Subjec034, 06/26/2015 17:01:56 on ITP66820, refresh 16.67ms, ID C,1,EB
+Subjec032, 06/26/2015 17:01:56 on ITP66820, refresh 16.67ms, ID C,1,EB
   Item       RT
     42   4752.32
     43   3731.17
@@ -44,7 +44,7 @@ Subject 3, 06/29/2015 13:02:46 on ITP66820, refresh 16.67ms, ID D,1,ZL
     41   2922.68
 
 **********************************************************************
-Subject 4, 06/29/2015 14:39:04 on ITP66820, refresh 16.67ms ID D,2,IL
+Subject 4, 06/29/2015 14:39:04 on ITP66820, refresh 16.67ms, ID D,2,IL
   Item       RT
 !  DMDX is running in auto mode (automatically determined raster sync)
 !  Video Mode 1920,1080,32,60
@@ -686,49 +686,3 @@ Subject 32, 07/25/2015 15:21:03 on ITP66820, refresh 16.67ms, ID C,11,EP
     42   3694.78
     41   3917.11
     43   3558.44
-
-**********************************************************************
-Subject 33, 08/06/2015 16:37:54 on ITP66820, refresh 16.67ms, ID D,16,AF
-  Item       RT
-!  DMDX is running in auto mode (automatically determined raster sync)
-!  Video Mode 1920,1080,32,60
-!  Item File <C:\Users\hotdesk\Desktop\ELLA'S TASKS\NNN\Ella_NNN-N1.rtf>
-    34   3464.07
-    32   3257.21
-    33   3637.05
-    31   4081.43
-    11   8026.31
-    14   5654.18
-    13   4485.96
-    12   3231.76
-    24   5722.96
-    22   3808.97
-    23  -3346.35
-    21   3356.50
-    42   3021.30
-    44   4006.54
-    41   3170.17
-    43   4674.64
-
-**********************************************************************
-Subject 34, 08/12/2015 16:38:23 on ITP66820, refresh 16.67ms, ID C,16,ZR
-  Item       RT
-!  DMDX is running in auto mode (automatically determined raster sync)
-!  Video Mode 1920,1080,32,60
-!  Item File <C:\Users\hotdesk\Desktop\ELLA'S TASKS\NNN\Ella_NNN-N1.rtf>
-    31   4312.45
-    32   4756.28
-    33   3617.56
-    34   3235.36
-    11   5787.84
-    13   3268.96
-    14   3438.54
-    12   4183.89
-    23   3429.10
-    22   3822.25
-    24   3848.04
-    21   3741.36
-    44   3438.53
-    42   3185.66
-    43   2727.20
-    41   3388.74

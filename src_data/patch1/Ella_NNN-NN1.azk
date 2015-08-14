@@ -1,5 +1,5 @@
 
-Subjects incorporated to date: 033
+Subjects incorporated to date: 031
 Data file started on machine ITP66820
 
 **********************************************************************
@@ -688,49 +688,3 @@ Subject 31, 07/25/2015 15:26:56 on ITP66820, refresh 16.67ms, ID C,11,EP
     41   4158.96
     42   4096.13
     43  -3674.10
-
-**********************************************************************
-Subject 32, 08/06/2015 16:29:03 on ITP66820, refresh 16.67ms, ID D,16,AF
-  Item       RT
-!  DMDX is running in auto mode (automatically determined raster sync)
-!  Video Mode 1920,1080,32,60
-!  Item File <C:\Users\hotdesk\Desktop\ELLA'S TASKS\NNN\Ella_NNN-NN1.rtf>
-    41   3651.90
-    44  -3716.38
-    42   3602.31
-    43  -5843.16
-    24  -5236.44
-    23  -4350.80
-    21   3710.93
-    22  -4345.94
-    13  -3924.15
-    11  -3435.11
-    14  -4169.19
-    12   3365.95
-    31   3161.08
-    33  -3277.87
-    34  -2996.56
-    32  -3170.11
-
-**********************************************************************
-Subject 33, 08/12/2015 16:47:31 on ITP66820, refresh 16.67ms, ID C,16,ZR
-  Item       RT
-!  DMDX is running in auto mode (automatically determined raster sync)
-!  Video Mode 1920,1080,32,60
-!  Item File <C:\Users\hotdesk\Desktop\ELLA'S TASKS\NNN\Ella_NNN-NN1.rtf>
-    43  -4906.58
-    44   3898.96
-    41   3292.97
-    42   3633.70
-    13  -3887.17
-    11   2965.10
-    12   3784.60
-    14   3377.43
-    24   4083.40
-    22   4122.35
-    23  -4195.83
-    21   4170.10
-    34   3273.70
-    31  -3035.49
-    32  -5728.98
-    33  -3311.99
