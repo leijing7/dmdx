@@ -88,5 +88,5 @@ _.each(groups, function(g) {
 
 
 //step 3: write the json arr to a csv file
-var writeJson2csv = require('./jsonTocsv').jsonArrToCsv;
+var writeJson2csv = require('./jsonToCsv').jsonArrToCsv;
 writeJson2csv(jsonArr, expType);
