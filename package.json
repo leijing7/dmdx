@@ -2,7 +2,7 @@
   "name": "dmdx",
   "version": "1.0.0",
   "description": "dmdx file to excel file",
-  "main": "dmdx2excel.js",
+  "main": "src_code/main.js",
   "dependencies": {
     "json2csv": "^2.8.2",
     "node-xlsx": "^0.6.0",
