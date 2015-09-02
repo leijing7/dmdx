@@ -11,7 +11,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "test"
+    "start": "src_code/main.js"
   },
   "author": "Lei Jing",
   "license": "MIT"
